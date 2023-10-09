@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletController : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
+    [SerializeField] private GameObject bulletPrefab;
 
     IEnumerator DestroyBulletAfterTime() {
         yield return new WaitForSeconds(2f);
@@ -15,18 +16,23 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         StartCoroutine(DestroyBulletAfterTime());
+        gameObject.tag = "Bullet";
         
     }
 
     void Update()
     {
-        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);
-        //transform.Translate(Vector3.forward * speed * Time.deltaTime, Space.World); //Won't work because it relies on the Vector3's forward, not the Transform's forward
+        transform.Translate(transform.forward * speed * Time.deltaTime, Space.World);   //Moves bullet along it's z axis
+        
 
     }
 
     private void OnTriggerEnter(Collider other) {
-        Destroy(gameObject);
+        if ((other.gameObject.name != "Player") && (other.gameObject.tag != "Bullet")){ //Doesn't destroy itself if it collides with player or another bullet
+            Destroy(gameObject);
+        }
+        //Destroy(gameObject);
 
     }
+
 }
