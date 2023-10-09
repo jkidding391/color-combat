@@ -18,7 +18,7 @@ public class EnemyScript : MonoBehaviour
         HandleRotation();
         
     }
-    void OnTriggerEnter(Collider other) {
+    void OnTriggerEnter(Collider other) {   //Gets destroyed if it gets hit by the player's bullet
         if (other.gameObject.tag.Equals("Bullet")){
             Destroy(gameObject);
             
