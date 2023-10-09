@@ -79,11 +79,12 @@ public class TwinStickMovement : MonoBehaviour
                     Quaternion newrotation = Quaternion.LookRotation(playerDirection, Vector3.up);
                     transform.rotation = newrotation;
 
-                }
+                }//if
 
-            }
+            }//if
 
-        }
+        }//if
+
         else {
             Ray ray = Camera.main.ScreenPointToRay(aim);    //If the mouse is used, it casts a ray from the camera to the mouse position on the screen
             Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
@@ -93,8 +94,9 @@ public class TwinStickMovement : MonoBehaviour
                 Vector3 point = ray.GetPoint(rayDistance);
                 LookAt(point);  //Looks at the location of the mouse curser
 
-            }
-        }
+            }//if
+
+        }//else
 
     }
 
