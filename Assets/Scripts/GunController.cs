@@ -27,7 +27,7 @@ public class GunController : MonoBehaviour
     }
     void Start()
     {
-        controls.Controls.Shoot.performed += _ => playerShoot();
+        //controls.Controls.Shoot.performed += _ => playerShoot();
         
     }
 
@@ -49,6 +49,9 @@ public class GunController : MonoBehaviour
 
     void Update()
     {
+        if (controls.Controls.Shoot.IsPressed() == true) {
+            playerShoot();
+        }
         
     }
 }
