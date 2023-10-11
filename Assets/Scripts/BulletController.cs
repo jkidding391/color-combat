@@ -28,7 +28,7 @@ public class BulletController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if ((other.gameObject.name != "Player") && (!other.gameObject.tag.Equals("Bullet"))){ //Doesn't destroy itself if it collides with player or another bullet
+        if ((other.gameObject.name != "Player") && (!other.gameObject.tag.Equals("Bullet")) && (!other.gameObject.tag.Equals("DetectionRadius"))){ //Doesn't destroy itself if it collides with player or another bullet
             Destroy(gameObject);
 
         }//if
