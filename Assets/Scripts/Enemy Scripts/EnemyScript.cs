@@ -24,7 +24,7 @@ public class EnemyScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other) {   //Gets destroyed if it gets hit by the player's bullet
 
-        if (other.gameObject.tag.Equals("Bullet")){
+        if (other.gameObject.CompareTag("Bullet")){
             if (maxHealth != 1) {
             maxHealth--;
 

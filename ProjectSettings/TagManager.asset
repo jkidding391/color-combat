@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Bullet
   - DetectionRadius
+  - Enemy
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX
