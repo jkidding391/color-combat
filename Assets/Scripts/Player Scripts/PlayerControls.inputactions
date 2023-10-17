@@ -31,6 +31,42 @@
                     "processors": "",
                     "interactions": "Press,Hold",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeColorRed",
+                    "type": "PassThrough",
+                    "id": "fee72bd9-7d2a-4c9b-af3b-a36be6cd2485",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeColorYellow",
+                    "type": "PassThrough",
+                    "id": "2ee3658a-3d7f-48c6-aa98-73b8a69c48f6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeColorBlue",
+                    "type": "PassThrough",
+                    "id": "1ed7d2a9-017c-4978-ba2c-5eb597e702cf",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeColorGreen",
+                    "type": "PassThrough",
+                    "id": "9fe07dd1-a28f-414c-a849-0e385ff24e27",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -141,6 +177,94 @@
                     "processors": "",
                     "groups": "KBM",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a77331c-6855-4bb6-b83f-b5fa2b7193a6",
+                    "path": "<Gamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ChangeColorRed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba983d82-1c24-4518-b7ff-f07e401e28b0",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "ChangeColorRed",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "590eb6f0-8ad9-4eed-9b89-fd1d2d03c2cd",
+                    "path": "<Gamepad>/dpad/right",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ChangeColorYellow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c70001dd-5cc9-4d48-b9f7-6ee1b873b1ca",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "ChangeColorYellow",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34fbffab-59b3-4197-a2b0-a57fd7a551d4",
+                    "path": "<Gamepad>/dpad/down",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ChangeColorBlue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3aaf7fe-d894-41cc-8b76-9d330d802192",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "ChangeColorBlue",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e25ee2cf-262f-4591-8a7b-7db2af695733",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "ChangeColorGreen",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6a49d090-ea48-4ea2-bf80-c0fc77707018",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KBM",
+                    "action": "ChangeColorGreen",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

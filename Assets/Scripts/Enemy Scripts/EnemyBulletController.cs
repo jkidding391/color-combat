@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyBulletController : MonoBehaviour
@@ -28,7 +29,7 @@ public class EnemyBulletController : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if ((!other.gameObject.CompareTag("Enemy")) && (!other.gameObject.CompareTag("Bullet")) && (!other.gameObject.CompareTag("DetectionRadius"))){ //Doesn't destroy itself if it collides with player or another bullet
+        if ((!other.gameObject.CompareTag("Enemy")) && (!other.gameObject.CompareTag("Bullet")) && (!other.gameObject.CompareTag("EnemyBullet")) && (!other.gameObject.CompareTag("DetectionRadius"))){ //Doesn't destroy itself if it collides with player or another bullet
             Destroy(gameObject);
 
         }//if

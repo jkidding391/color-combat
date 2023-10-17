@@ -2082,6 +2082,7 @@ GameObject:
   - component: {fileID: 2106506646}
   - component: {fileID: 2106506648}
   - component: {fileID: 2106506649}
+  - component: {fileID: 2106506650}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2200,6 +2201,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 53547149-df21-41b2-a74c-da4d8e03432a
     m_ActionName: Controls/Shoot[/DualSenseGamepadHID/rightTrigger,/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: fee72bd9-7d2a-4c9b-af3b-a36be6cd2485
+    m_ActionName: Controls/ChangeColorRed[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2ee3658a-3d7f-48c6-aa98-73b8a69c48f6
+    m_ActionName: Controls/ChangeColorYellow[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 1ed7d2a9-017c-4978-ba2c-5eb597e702cf
+    m_ActionName: Controls/ChangeColorBlue[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9fe07dd1-a28f-414c-a849-0e385ff24e27
+    m_ActionName: Controls/ChangeColorGreen[/Keyboard/4]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Controls
@@ -2242,6 +2259,21 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2106506650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106506642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcb2b0f0363c7974ea8077afa47e5b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorRender: {fileID: 0}
+  player: {fileID: 1492669464}
+  currentColor: Red
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
