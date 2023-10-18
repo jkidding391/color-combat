@@ -15,6 +15,8 @@ public class ColorController : MonoBehaviour
 
     //Controller shenanigans
     private PlayerControls playerControls;
+    [SerializeField] private float coolDown = 0.1f;
+    bool canChange = true;
 
     //More controller shenanigans
     private void Awake() {
@@ -46,7 +48,16 @@ public class ColorController : MonoBehaviour
         
     }
 
+    IEnumerator coolDownTimer(){
+        canChange = false;
+        yield return new WaitForSeconds(coolDown);
+        canChange = true;
+
+    }
+
     public void handleInput() {
+        if (!canChange) return;
+
         if (playerControls.Controls.ChangeColorRed.IsPressed() == true) {
             ChangeMaterial("Red");
 
@@ -63,6 +74,8 @@ public class ColorController : MonoBehaviour
             ChangeMaterial("Green");
 
         }//else-if
+
+        StartCoroutine(coolDownTimer());
         
     }
 

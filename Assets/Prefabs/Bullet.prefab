@@ -80,3 +80,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   bulletPrefab: {fileID: 6707483163565355199}
+  colorRender: {fileID: 0}
+  currentColor: 

@@ -27,15 +27,17 @@ public class GunController : MonoBehaviour
     }
     void Start()
     {
-        //controls.Controls.Shoot.performed += _ => playerShoot();
         
     }
 
     private void playerShoot() {
         if (!canShoot) return;
 
-        //Vector2 mousePosition = 
         GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+
+        //Set bullet color
+        g.GetComponent<BulletController>().currentColor = GetComponentInParent<ColorController>().getColor();
+
         g.SetActive(true);
         StartCoroutine(CanShoot());
         
