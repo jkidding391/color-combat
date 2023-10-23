@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.TextCore.Text;
+
+[RequireComponent(typeof(CharacterController))]
 
 public class EnemyScript : MonoBehaviour
 {
@@ -8,7 +11,16 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] Transform target;
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float enemySpeed = 5f;
+    [SerializeField] private float gravityValue = -9.81f;
+
+    private CharacterController controller;
+    private Vector3 enemyVelocity;
     private bool ChaseCheck = true;
+
+    private void Awake() {
+        controller = GetComponent<CharacterController>();
+        
+    }
 
     void Start()
     {
@@ -47,7 +59,12 @@ public class EnemyScript : MonoBehaviour
 
     private void HandleChase() {    //Lets the enemy chase the player
         if (ChaseCheck == true){
-            transform.Translate(transform.forward * enemySpeed * Time.deltaTime, Space.World); 
+            //transform.Translate(transform.forward * enemySpeed * Time.deltaTime, Space.World); 
+            //Vector3 move = new Vector3(transform.forward.x, 0, transform.forward.y);
+            controller.Move(transform.forward * Time.deltaTime * enemySpeed);
+
+            enemyVelocity.y += gravityValue * Time.deltaTime;
+            controller.Move(enemyVelocity * Time.deltaTime);
 
         }
 

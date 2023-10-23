@@ -40,10 +40,11 @@ public class EnemyGunController : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, 25)) {
             if (hit.transform.CompareTag("Player")) {
+                enemyShoot();
 
-            }
-            enemyShoot();
-        }
+            }//if
+
+        }//if
 
     }
 }
