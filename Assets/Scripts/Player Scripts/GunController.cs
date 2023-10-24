@@ -45,7 +45,7 @@ public class GunController : MonoBehaviour
 
     IEnumerator CanShoot() {
         canShoot = false;
-        yield return new WaitForSeconds(.15f);
+        yield return new WaitForSeconds(.30f);
         canShoot = true;
     }
 

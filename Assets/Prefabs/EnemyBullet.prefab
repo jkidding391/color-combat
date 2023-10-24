@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 4990919500668605653}
   - component: {fileID: 7537095045675455830}
   - component: {fileID: 5386917944349362191}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: EnemyBullet
-  m_TagString: Untagged
+  m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,3 +150,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 7
   bulletPrefab: {fileID: 6907088823860882756}
+  colorRender: {fileID: 0}
+  currentColor: 

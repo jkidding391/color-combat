@@ -22,15 +22,19 @@ public class HealthScript : MonoBehaviour
     }
     void OnTriggerEnter(Collider other) {   //Player takes damage if hit by an enemy bullet
         if (other.gameObject.CompareTag("EnemyBullet")){
-            
-            if (currentHealth != 1) {
-                currentHealth--;
+
+            if (other.gameObject.GetComponent<EnemyBulletController>().currentColor != GetComponentInParent<ColorController>().getColor()) {
+
+                if (currentHealth != 1) {
+                    currentHealth--;
+
+                }//if
+                else {
+                    Destroy(gameObject);
+
+                }//else
 
             }//if
-            else {
-                Destroy(gameObject);
-
-            }//else
 
         }//if
 

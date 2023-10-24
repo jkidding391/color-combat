@@ -21,6 +21,8 @@ public class EnemyGunController : MonoBehaviour
 
         //Vector2 mousePosition = 
         GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
+        g.GetComponent<EnemyBulletController>().currentColor = GetComponentInParent<EnemyColorController>().GetColor();
+        
         g.SetActive(true);
         StartCoroutine(CanShoot());
         

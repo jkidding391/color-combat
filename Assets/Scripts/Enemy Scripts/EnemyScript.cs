@@ -12,7 +12,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float enemySpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
-
+    [SerializeField] public string currentColor;
     private CharacterController controller;
     private Vector3 enemyVelocity;
     private bool ChaseCheck = true;
@@ -24,6 +24,7 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
+        currentColor = transform.GetComponent<EnemyColorController>().GetColor();
         
     }
 
@@ -37,14 +38,18 @@ public class EnemyScript : MonoBehaviour
     void OnTriggerEnter(Collider other) {   //Gets destroyed if it gets hit by the player's bullet
 
         if (other.gameObject.CompareTag("Bullet")){
-            if (maxHealth != 1) {
-            maxHealth--;
+            if (other.gameObject.GetComponent<BulletController>().currentColor != currentColor) {
+
+                if (maxHealth != 1) {
+                maxHealth--;
+
+                }//if
+                else {
+                    Destroy(gameObject);
+
+                }//else
 
             }//if
-            else {
-                Destroy(gameObject);
-
-            }//else
             
         }//if
 

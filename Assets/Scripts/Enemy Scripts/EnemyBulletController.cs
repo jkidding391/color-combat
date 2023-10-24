@@ -7,6 +7,8 @@ public class EnemyBulletController : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private GameObject bulletPrefab;
+    public Renderer colorRender;
+    public string currentColor;
 
     IEnumerator DestroyBulletAfterTime() {
         yield return new WaitForSeconds(2f);
@@ -17,6 +19,25 @@ public class EnemyBulletController : MonoBehaviour
     void Start()
     {
         StartCoroutine(DestroyBulletAfterTime());
+        colorRender = bulletPrefab.GetComponent<Renderer>();
+
+         if (currentColor == "Red") {
+            colorRender.material.color = Color.red;
+
+        }//if
+        else if (currentColor == "Yellow") {
+            colorRender.material.color = Color.yellow;
+
+        }//else-if
+        else if (currentColor == "Blue") {
+            colorRender.material.color = Color.blue;
+
+        }//else-if
+        else if (currentColor == "Green") {
+            colorRender.material.color = Color.green;
+
+        }//else-if
+
         gameObject.tag = "EnemyBullet";
         
     }
