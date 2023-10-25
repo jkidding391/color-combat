@@ -63,4 +63,9 @@ public class BulletController : MonoBehaviour
 
     }
 
+    public string GetColor(){
+        return currentColor;
+
+    }
+
 }

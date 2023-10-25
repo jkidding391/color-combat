@@ -21,6 +21,7 @@ public class EnemyColorController : MonoBehaviour
         currentColor = colorList[i];
         colorRender = enemy.GetComponent<Renderer>();
         ChangeMaterial(currentColor);
+        gameObject.GetComponent<EnemyScript>().currentColor = currentColor;
         
     }
 

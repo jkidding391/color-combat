@@ -185,6 +185,8 @@ GameObject:
   - component: {fileID: 4287903832900465413}
   - component: {fileID: 7407863510759275551}
   - component: {fileID: 8744656887482326638}
+  - component: {fileID: 295075828778095365}
+  - component: {fileID: 2590612995735724328}
   m_Layer: 0
   m_Name: EnemyDummy
   m_TagString: Enemy
@@ -231,7 +233,7 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.6
-  m_Height: 1
+  m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7407863510759275551
@@ -249,6 +251,8 @@ MonoBehaviour:
   target: {fileID: 0}
   maxHealth: 3
   enemySpeed: 5
+  gravityValue: -9.81
+  currentColor: 
 --- !u!114 &8744656887482326638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +267,47 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6907088823860882756, guid: 45d900c99af2e754cabd6d8ca472ff8b, type: 3}
   bulletDirection: {fileID: 8148934806051327635}
+--- !u!143 &295075828778095365
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693407178337079709}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2590612995735724328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693407178337079709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830772b507742e64887b95d84e6fc942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  colorRender: {fileID: 0}
+  enemy: {fileID: 3743208991982656603}
+  currentColor: 
 --- !u!1 &7950139457924839732
 GameObject:
   m_ObjectHideFlags: 0

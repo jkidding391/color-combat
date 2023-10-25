@@ -8,7 +8,7 @@ using UnityEngine.TextCore.Text;
 public class EnemyScript : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] Transform target;
+    [SerializeField] GameObject target;
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float enemySpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
@@ -24,7 +24,8 @@ public class EnemyScript : MonoBehaviour
 
     void Start()
     {
-        currentColor = transform.GetComponent<EnemyColorController>().GetColor();
+        //currentColor = gameObject.GetComponent<EnemyColorController>().GetColor(); //Doesn't work for some reason
+        target = GameObject.FindGameObjectWithTag("Player");
         
     }
 
@@ -38,7 +39,9 @@ public class EnemyScript : MonoBehaviour
     void OnTriggerEnter(Collider other) {   //Gets destroyed if it gets hit by the player's bullet
 
         if (other.gameObject.CompareTag("Bullet")){
-            if (other.gameObject.GetComponent<BulletController>().currentColor != currentColor) {
+
+            if (currentColor != other.gameObject.GetComponent<BulletController>().GetColor()) {
+                //Debug.Log("Bullet color = " + other.gameObject.GetComponent<BulletController>().GetColor() + ", Enemy color = " + currentColor);
 
                 if (maxHealth != 1) {
                 maxHealth--;
@@ -57,7 +60,7 @@ public class EnemyScript : MonoBehaviour
 
     private void HandleRotation() {
         if (target != null) {
-            transform.LookAt(target);
+            transform.LookAt(target.transform);
 
         }
     }
