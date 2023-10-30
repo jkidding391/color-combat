@@ -8,6 +8,7 @@ TagManager:
   - DetectionRadius
   - Enemy
   - EnemyBullet
+  - Wall
   layers:
   - Default
   - TransparentFX

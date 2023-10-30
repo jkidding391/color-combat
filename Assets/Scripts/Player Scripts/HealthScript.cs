@@ -38,6 +38,15 @@ public class HealthScript : MonoBehaviour
 
         }//if
 
+        //Not working for some reason?
+        else if (other.gameObject.CompareTag("Wall") && (other.gameObject.GetComponentInParent<WallColorController>().getColor() == GetComponentInParent<ColorController>().getColor())) {
+
+                Debug.Log("Touch");
+
+                Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.GetComponent<Collider>());
+
+        }
+
     }
     public void IncreaseHealth() {  //To be used when player picks up a health item
         if (currentHealth != maxHealth) {

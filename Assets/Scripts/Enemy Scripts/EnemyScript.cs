@@ -56,6 +56,15 @@ public class EnemyScript : MonoBehaviour
             
         }//if
 
+        //Also not working for some reason
+        else if (other.gameObject.CompareTag("Wall") && (other.gameObject.GetComponentInParent<WallColorController>().getColor() == currentColor)) {
+
+                Debug.Log("Touch");
+
+                Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.GetComponent<Collider>());
+
+        }
+
     }
 
     private void HandleRotation() {

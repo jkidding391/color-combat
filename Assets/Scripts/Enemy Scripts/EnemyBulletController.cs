@@ -51,7 +51,14 @@ public class EnemyBulletController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if ((!other.gameObject.CompareTag("Enemy")) && (!other.gameObject.CompareTag("Bullet")) && (!other.gameObject.CompareTag("EnemyBullet")) && (!other.gameObject.CompareTag("DetectionRadius"))){ //Doesn't destroy itself if it collides with player or another bullet
-            Destroy(gameObject);
+            if (other.gameObject.CompareTag("Wall") && (other.gameObject.GetComponentInParent<WallColorController>().getColor() == currentColor)) {
+                Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.GetComponent<Collider>());
+
+            }
+            else {
+                Destroy(gameObject);
+
+            }
 
         }//if
         //Destroy(gameObject);
