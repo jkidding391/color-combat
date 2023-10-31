@@ -57,13 +57,13 @@ public class EnemyScript : MonoBehaviour
         }//if
 
         //Also not working for some reason
-        else if (other.gameObject.CompareTag("Wall") && (other.gameObject.GetComponentInParent<WallColorController>().getColor() == currentColor)) {
+        /*else if (other.gameObject.CompareTag("Wall") && (other.gameObject.GetComponentInParent<WallColorController>().getColor() == currentColor)) {
 
-                Debug.Log("Touch");
+                //Debug.Log("Touch");
 
                 Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.GetComponent<Collider>());
 
-        }
+        }*/
 
     }
 
@@ -86,9 +86,9 @@ public class EnemyScript : MonoBehaviour
         }
 
     }
-    public void isChase() { //Changes ChaseCheck to determine if enemy can chase player
-        ChaseCheck = !ChaseCheck;
-
+    public void isChase(bool condition) { //Changes ChaseCheck to determine if enemy can chase player
+        //ChaseCheck = !ChaseCheck;
+        ChaseCheck = condition;
     }
 
 }

@@ -6,7 +6,7 @@ public class EnemyChaseScript : MonoBehaviour
 {
     void Start()
     {
-        
+        //Physics.IgnoreLayerCollision(2,6);
     }
 
     void Update()
@@ -15,8 +15,11 @@ public class EnemyChaseScript : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider other) {
+        /*if(other.gameObject.CompareTag("Wall")) {
+            Debug.Log("Wall Hit");
+        }*/
         if (other.gameObject.name == "Player") {
-            transform.parent.GetComponent<EnemyScript>().isChase();
+            transform.parent.GetComponent<EnemyScript>().isChase(false);
 
         }//if
 
@@ -24,7 +27,7 @@ public class EnemyChaseScript : MonoBehaviour
 
     void OnTriggerExit(Collider other){
         if (other.gameObject.name == "Player") {
-            transform.parent.GetComponent<EnemyScript>().isChase();
+            transform.parent.GetComponent<EnemyScript>().isChase(true);
 
         }//if
 

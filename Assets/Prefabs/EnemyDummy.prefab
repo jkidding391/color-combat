@@ -187,6 +187,7 @@ GameObject:
   - component: {fileID: 8744656887482326638}
   - component: {fileID: 295075828778095365}
   - component: {fileID: 2590612995735724328}
+  - component: {fileID: 437556570521126696}
   m_Layer: 0
   m_Name: EnemyDummy
   m_TagString: Enemy
@@ -308,6 +309,18 @@ MonoBehaviour:
   colorRender: {fileID: 0}
   enemy: {fileID: 3743208991982656603}
   currentColor: 
+--- !u!114 &437556570521126696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5693407178337079709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d9b5710dba44f0489dd6ebd946db2c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7950139457924839732
 GameObject:
   m_ObjectHideFlags: 0
