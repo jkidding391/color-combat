@@ -25,10 +25,12 @@ public class WallCollisionScript : MonoBehaviour
             //Debug.Log(other.gameObject.GetComponentInParent<WallColorController>().getColor());
 
             Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>(), true);
+            Physics.IgnoreCollision(transform.GetComponent<CharacterController>(), other.gameObject.GetComponent<Collider>(), true);
 
         }//if
         else {
             Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>(), false);
+            Physics.IgnoreCollision(transform.GetComponent<CharacterController>(), other.gameObject.GetComponent<Collider>(), false);
 
         }//else
 
