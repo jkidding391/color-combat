@@ -13,6 +13,8 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] private float enemySpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
     [SerializeField] public string currentColor;
+    public GameObject tracker;
+
     private CharacterController controller;
     private Vector3 enemyVelocity;
     private bool ChaseCheck = true;
@@ -26,6 +28,7 @@ public class EnemyScript : MonoBehaviour
     {
         //currentColor = gameObject.GetComponent<EnemyColorController>().GetColor(); //Doesn't work for some reason
         target = GameObject.FindGameObjectWithTag("Player");
+        tracker = GameObject.FindGameObjectWithTag("WinLossTracker");
         
     }
 
@@ -48,6 +51,7 @@ public class EnemyScript : MonoBehaviour
 
                 }//if
                 else {
+                    tracker.GetComponent<WinLossScript>().winNum--;
                     Destroy(gameObject);
 
                 }//else

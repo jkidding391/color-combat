@@ -33,11 +33,6 @@ public class HealthScript : MonoBehaviour
                 }//if
                 else {
                     Destroy(gameObject);
-                    //StartCoroutine(LoseLevel());
-
-                    /*int scene = SceneManager.GetActiveScene().buildIndex;
-                    SceneManager.LoadScene(scene, LoadSceneMode.Single);
-                    Time.timeScale = 1;*/
 
                 }//else
 
@@ -60,12 +55,5 @@ public class HealthScript : MonoBehaviour
         RestartLevel();
 
     }*/
-
-    public void RestartLevel() {
-        int scene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(scene, LoadSceneMode.Single);
-        Time.timeScale = 1;
-
-    }
 
 }
