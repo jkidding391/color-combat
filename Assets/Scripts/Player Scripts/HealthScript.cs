@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthScript : MonoBehaviour
 
@@ -18,6 +19,7 @@ public class HealthScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         
     }
     void OnTriggerEnter(Collider other) {   //Player takes damage if hit by an enemy bullet
@@ -31,6 +33,11 @@ public class HealthScript : MonoBehaviour
                 }//if
                 else {
                     Destroy(gameObject);
+                    //StartCoroutine(LoseLevel());
+
+                    /*int scene = SceneManager.GetActiveScene().buildIndex;
+                    SceneManager.LoadScene(scene, LoadSceneMode.Single);
+                    Time.timeScale = 1;*/
 
                 }//else
 
@@ -44,6 +51,20 @@ public class HealthScript : MonoBehaviour
             currentHealth++;
 
         }//if
+
+    }
+
+    /*IEnumerator LoseLevel() {
+        Debug.Log("You Died! Restarting level...");
+        yield return new WaitForSeconds(5f);
+        RestartLevel();
+
+    }*/
+
+    public void RestartLevel() {
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        Time.timeScale = 1;
 
     }
 
