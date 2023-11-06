@@ -6,6 +6,9 @@ public class EnemySpawnerScript : MonoBehaviour
 {
     [SerializeField] GameObject enemyToSpawn;
     [SerializeField] int spawnNum;
+    [SerializeField] bool onlyOneColor; //If selected, spawner will only spawn one colored type of enemy
+    [SerializeField] string colorPreference;    //Color that the enemies spawned will be if above is checked
+
     private bool CanSpawn = true;
     // Start is called before the first frame update
     void Start()
@@ -35,6 +38,21 @@ public class EnemySpawnerScript : MonoBehaviour
 
         GameObject enemy = Instantiate(enemyToSpawn, transform.position, transform.rotation);
         enemy.SetActive(true);
+
+        if (onlyOneColor == true) { //If onlyOneColor is checked, enemy will spawn as listed color
+            enemy.GetComponent<EnemyColorController>().randomizeColor = false;
+            enemy.GetComponent<EnemyColorController>().ChangeColor(colorPreference);
+
+            //Debug.Log(colorPreference);
+            
+        }
+        else {  //Otherwise the color will be random
+            enemy.GetComponent<EnemyColorController>().randomizeColor = true;
+
+        }
+
+        //Debug.Log("After Change");
+
         StartCoroutine(canSpawn());
         spawnNum--;
 

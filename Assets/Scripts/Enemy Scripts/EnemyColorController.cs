@@ -11,24 +11,33 @@ public class EnemyColorController : MonoBehaviour
 
     //Color Shenanigans
     [SerializeField] private string currentColor;
+    [SerializeField] public bool randomizeColor = true;
     private string[] colorList = {"Red", "Blue", "Yellow", "Green"}; //List of possible colors
     int i;
     // Start is called before the first frame update
 
     void Start()
     {
-        i = Random.Range(0,4);
-        currentColor = colorList[i];
+        if (randomizeColor != false) {
+            i = Random.Range(0,4);
+        
+            currentColor = colorList[i];
+        /*
         colorRender = enemy.GetComponent<Renderer>();
         ChangeMaterial(currentColor);
-        gameObject.GetComponent<EnemyScript>().currentColor = currentColor;
+        gameObject.GetComponent<EnemyScript>().currentColor = currentColor;*/
+
+        }
+        ChangeColor(currentColor);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //ChangeMaterial(currentColor);
+        //ChangeColor(currentColor);
+
     }
 
     public void ChangeMaterial(string colorInput) {
@@ -58,6 +67,16 @@ public class EnemyColorController : MonoBehaviour
 
     public string GetColor(){
         return currentColor;
+
+    }
+
+    public void ChangeColor(string otherColor) {
+        currentColor = otherColor;
+        colorRender = enemy.GetComponent<Renderer>();
+        ChangeMaterial(currentColor);
+        gameObject.GetComponent<EnemyScript>().currentColor = currentColor;
+
+        //Debug.Log(currentColor);
 
     }
 

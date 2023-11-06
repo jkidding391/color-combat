@@ -37,6 +37,7 @@ public class EnemyScript : MonoBehaviour
     {
         HandleRotation();
         HandleChase();
+        //Debug.Log(currentColor);
         
     }
     void OnTriggerEnter(Collider other) {   //Gets destroyed if it gets hit by the player's bullet
