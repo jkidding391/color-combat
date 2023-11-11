@@ -60,6 +60,12 @@ public class BulletController : MonoBehaviour
             if (other.gameObject.CompareTag("Wall") && (other.gameObject.GetComponentInParent<WallColorController>().getColor() == currentColor)) {
 
                 Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.GetComponent<Collider>());
+                //Debug.Log("Hit");
+
+            }
+            else if (other.gameObject.CompareTag("Shield") && (other.gameObject.GetComponent<EnemyShieldScript>().getColor() == currentColor)) {
+
+                Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.GetComponent<Collider>());
 
             }
             else {

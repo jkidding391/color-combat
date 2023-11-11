@@ -8,6 +8,7 @@ public class EnemyGunController : MonoBehaviour
 
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform bulletDirection;
+    [SerializeField] private float bulletSpeed = 10f;
 
     private bool canShoot = true;
     void Start()
@@ -22,6 +23,7 @@ public class EnemyGunController : MonoBehaviour
         //Vector2 mousePosition = 
         GameObject g = Instantiate(bullet, bulletDirection.position, bulletDirection.rotation);
         g.GetComponent<EnemyBulletController>().currentColor = GetComponentInParent<EnemyColorController>().GetColor();
+        g.GetComponent<EnemyBulletController>().speed = bulletSpeed;
         
         g.SetActive(true);
         StartCoroutine(CanShoot());

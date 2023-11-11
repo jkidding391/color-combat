@@ -10,6 +10,7 @@ TagManager:
   - EnemyBullet
   - Wall
   - WinLossTracker
+  - Shield
   layers:
   - Default
   - TransparentFX

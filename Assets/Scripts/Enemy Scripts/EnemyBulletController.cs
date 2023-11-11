@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EnemyBulletController : MonoBehaviour
 {
-    [SerializeField] private float speed = 10f;
+    [SerializeField] public float speed = 10f;
     [SerializeField] private GameObject bulletPrefab;
     public Renderer colorRender;
     public string currentColor;

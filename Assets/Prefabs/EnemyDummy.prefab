@@ -254,6 +254,7 @@ MonoBehaviour:
   enemySpeed: 5
   gravityValue: -9.81
   currentColor: 
+  tracker: {fileID: 0}
 --- !u!114 &8744656887482326638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 6907088823860882756, guid: 45d900c99af2e754cabd6d8ca472ff8b, type: 3}
   bulletDirection: {fileID: 8148934806051327635}
+  bulletSpeed: 7
 --- !u!143 &295075828778095365
 CharacterController:
   m_ObjectHideFlags: 0
@@ -309,6 +311,7 @@ MonoBehaviour:
   colorRender: {fileID: 0}
   enemy: {fileID: 3743208991982656603}
   currentColor: 
+  randomizeColor: 1
 --- !u!114 &437556570521126696
 MonoBehaviour:
   m_ObjectHideFlags: 0
