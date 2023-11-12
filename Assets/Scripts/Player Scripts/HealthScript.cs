@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class HealthScript : MonoBehaviour
 
 {
-    [SerializeField] private int maxHealth = 3;
+    [SerializeField] public int maxHealth = 3;
     public int currentHealth;
     // Start is called before the first frame update
     void Start()
@@ -44,6 +44,7 @@ public class HealthScript : MonoBehaviour
     public void IncreaseHealth() {  //To be used when player picks up a health item
         if (currentHealth != maxHealth) {
             currentHealth++;
+            Debug.Log(currentHealth);
 
         }//if
 

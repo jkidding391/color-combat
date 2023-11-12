@@ -11,6 +11,7 @@ TagManager:
   - Wall
   - WinLossTracker
   - Shield
+  - Health
   layers:
   - Default
   - TransparentFX
