@@ -7,7 +7,7 @@ public class EnemyShieldScript : MonoBehaviour
     public Renderer colorRender;
     public GameObject wall;
 
-    private string currentColor;
+    [SerializeField] private string currentColor;
     private string[] colorList = {"Red", "Blue", "Yellow", "Green"}; //List of possible colors
     int i;
 
