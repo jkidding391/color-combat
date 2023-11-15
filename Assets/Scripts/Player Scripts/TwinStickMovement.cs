@@ -23,6 +23,8 @@ public class TwinStickMovement : MonoBehaviour
 
     private PlayerControls playerControls;
     private PlayerInput playerInput;
+    [SerializeField] GameObject pauseMenu;
+
 
     private void Awake() {
         controller = GetComponent<CharacterController>();
@@ -50,6 +52,7 @@ public class TwinStickMovement : MonoBehaviour
         HandleInput();
         HandleMovement();
         HandleRotation();
+        HandlePause();
         
     }
 
@@ -109,6 +112,13 @@ public class TwinStickMovement : MonoBehaviour
     public void OnDeviceChange (PlayerInput pi) {
         isGamepad = pi.currentControlScheme.Equals("Gamepad") ? true : false;
 
+    }
+
+    public void HandlePause() {
+        if (playerControls.Controls.Pause.IsPressed() == true) {
+            pauseMenu.GetComponent<PauseScript>().Pause();
+            
+        }
     }
 
    
