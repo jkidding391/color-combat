@@ -8,7 +8,9 @@ public class ColorController : MonoBehaviour
 {
 
     public Renderer colorRender;
+    public Renderer colorRender2;
     public GameObject player;
+    public GameObject playerCone;
 
     //Color shenanigans
     [SerializeField] private string currentColor; //Can change the default color in a scene
@@ -37,6 +39,7 @@ public class ColorController : MonoBehaviour
     void Start()
     {
         colorRender = player.GetComponent<Renderer>();
+        colorRender2 = playerCone.GetComponent<Renderer>();
         ChangeMaterial(currentColor);
         
     }
@@ -83,21 +86,25 @@ public class ColorController : MonoBehaviour
         if (colorInput == "Red") {
             currentColor = "Red";
             colorRender.material.color = Color.red;
+            colorRender2.material.color = Color.red;
 
         }//if
         else if (colorInput == "Yellow") {
             currentColor = "Yellow";
             colorRender.material.color = Color.yellow;
+            colorRender2.material.color = Color.yellow;
 
         }//else-if
         else if (colorInput == "Blue") {
             currentColor = "Blue";
             colorRender.material.color = Color.blue;
+            colorRender2.material.color = Color.blue;
 
         }//else-if
         else if (colorInput == "Green") {
             currentColor = "Green";
             colorRender.material.color = Color.green;
+            colorRender2.material.color = Color.green;
 
         }//else-if
         

@@ -7,7 +7,10 @@ using UnityEngine;
 public class EnemyColorController : MonoBehaviour
 {
     public Renderer colorRender;
+    public Renderer colorRender2;
     public GameObject enemy;
+    public GameObject enemyCone;
+
 
     //Color Shenanigans
     [SerializeField] private string currentColor;
@@ -44,21 +47,25 @@ public class EnemyColorController : MonoBehaviour
         if (colorInput == "Red") {
             currentColor = "Red";
             colorRender.material.color = Color.red;
+            colorRender2.material.color = Color.red;
 
         }//if
         else if (colorInput == "Yellow") {
             currentColor = "Yellow";
             colorRender.material.color = Color.yellow;
+            colorRender2.material.color = Color.yellow;
 
         }//else-if
         else if (colorInput == "Blue") {
             currentColor = "Blue";
             colorRender.material.color = Color.blue;
+            colorRender2.material.color = Color.blue;
 
         }//else-if
         else if (colorInput == "Green") {
             currentColor = "Green";
             colorRender.material.color = Color.green;
+            colorRender2.material.color = Color.green;
 
         }//else-if
         
@@ -73,6 +80,8 @@ public class EnemyColorController : MonoBehaviour
     public void ChangeColor(string otherColor) {
         currentColor = otherColor;
         colorRender = enemy.GetComponent<Renderer>();
+        colorRender2 = enemyCone.GetComponent<Renderer>();
+
         ChangeMaterial(currentColor);
         gameObject.GetComponent<EnemyScript>().currentColor = currentColor;
 
