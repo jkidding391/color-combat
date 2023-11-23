@@ -7,11 +7,14 @@ public class WinLossScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] public int winNum;
+    public int currNum;
+
     private GameObject player;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        currNum = winNum;
         
     }
 
@@ -23,7 +26,7 @@ public class WinLossScript : MonoBehaviour
 
         }//if
 
-        if (winNum == 0) {
+        if (currNum == 0) {
             StartCoroutine(WinLevel());
 
         }//if

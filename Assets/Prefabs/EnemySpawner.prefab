@@ -47,6 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyToSpawn: {fileID: 5693407178337079709, guid: 45534d9300556f84abb79649206f2f95, type: 3}
   spawnNum: 5
+  onlyOneColor: 0
+  colorPreference: 
+  numToActivate: 0
+  tracker: {fileID: 0}
 --- !u!1 &2653575063293006766
 GameObject:
   m_ObjectHideFlags: 0
@@ -165,4 +169,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62e37b91b7d95a4f86ae17326929e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  RotateAmount: {x: 1, y: 0, z: 0}
+  RotateAmount: {x: 0, y: 45, z: 0}

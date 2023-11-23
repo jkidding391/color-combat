@@ -52,7 +52,7 @@ public class EnemyScript : MonoBehaviour
 
                 }//if
                 else {
-                    tracker.GetComponent<WinLossScript>().winNum--;
+                    tracker.GetComponent<WinLossScript>().currNum--;
                     Destroy(gameObject);
 
                 }//else

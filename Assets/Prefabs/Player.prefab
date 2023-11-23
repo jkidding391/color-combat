@@ -348,7 +348,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorRender: {fileID: 0}
-  player: {fileID: 8521952012525194197}
+  colorRender2: {fileID: 0}
+  player: {fileID: 6514841870559316418}
+  playerCone: {fileID: 2231314133377148657}
   currentColor: Red
   coolDown: 0.1
 --- !u!114 &62852290166597630
@@ -608,7 +610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5283784917033833734, guid: bc4bd76836f29d149a7220b909d59f70, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.242
       objectReference: {fileID: 0}
     - target: {fileID: 5283784917033833734, guid: bc4bd76836f29d149a7220b909d59f70, type: 3}
       propertyPath: m_LocalPosition.z
@@ -647,6 +649,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc4bd76836f29d149a7220b909d59f70, type: 3}
+--- !u!1 &2231314133377148657 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4106775766210925534, guid: bc4bd76836f29d149a7220b909d59f70, type: 3}
+  m_PrefabInstance: {fileID: 2740733586971800879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6514841870559316418 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8962256197900582125, guid: bc4bd76836f29d149a7220b909d59f70, type: 3}
+  m_PrefabInstance: {fileID: 2740733586971800879}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8023950871420330025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5283784917033833734, guid: bc4bd76836f29d149a7220b909d59f70, type: 3}

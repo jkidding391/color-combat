@@ -8,22 +8,27 @@ public class EnemySpawnerScript : MonoBehaviour
     [SerializeField] int spawnNum;
     [SerializeField] bool onlyOneColor; //If selected, spawner will only spawn one colored type of enemy
     [SerializeField] string colorPreference;    //Color that the enemies spawned will be if above is checked
+    [SerializeField] int numToActivate = 0;
+    public GameObject tracker;
 
     private bool CanSpawn = true;
     // Start is called before the first frame update
     void Start()
     {
+        tracker = GameObject.FindGameObjectWithTag("WinLossTracker");
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        spawnEnemy();
-        if (spawnNum == 0) {
-            Destroy(gameObject);
+        if ((tracker.GetComponent<WinLossScript>().winNum - tracker.GetComponent<WinLossScript>().currNum) >= numToActivate) {
+            spawnEnemy();
+            if (spawnNum == 0) {
+                Destroy(gameObject);
 
-        }
+            }//if
+        }//if
     }
 
     IEnumerator canSpawn(){
