@@ -34,9 +34,18 @@ public class WinLossScript : MonoBehaviour
     }
 
     IEnumerator WinLevel() {
-        Debug.Log("You win! Restarting level...");
-        yield return new WaitForSeconds(5f);
-        RestartLevel();
+        int scene = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("You win! Loading next level...");
+
+        if (scene + 1 != 4) {
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene(scene + 1, LoadSceneMode.Single);
+
+        }
+        else {
+            yield return new WaitForSeconds(5f);
+            SceneManager.LoadScene(0);
+        }
 
     }
 
@@ -49,7 +58,7 @@ public class WinLossScript : MonoBehaviour
 
     public void RestartLevel() {
         int scene = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(scene, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(scene, LoadSceneMode.Single);
         Time.timeScale = 1;
 
     }

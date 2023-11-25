@@ -1176,6 +1176,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ColorWall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8432135396612977782, guid: ad7e6e9114c9bbd4895dac88433a2da6, type: 3}
+      propertyPath: currentColor
+      value: Green
+      objectReference: {fileID: 0}
     - target: {fileID: 9127640369163445803, guid: ad7e6e9114c9bbd4895dac88433a2da6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5
@@ -4387,6 +4391,14 @@ PrefabInstance:
     - target: {fileID: 1783019755978355853, guid: 0f1a0f696ef322543a3d42e5e509ec1a, type: 3}
       propertyPath: m_TagString
       value: Shield
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083859111471150060, guid: 0f1a0f696ef322543a3d42e5e509ec1a, type: 3}
+      propertyPath: currentColor
+      value: Green
+      objectReference: {fileID: 0}
+    - target: {fileID: 7083859111471150060, guid: 0f1a0f696ef322543a3d42e5e509ec1a, type: 3}
+      propertyPath: randomizeColor
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9118807889823724398, guid: 0f1a0f696ef322543a3d42e5e509ec1a, type: 3}
       propertyPath: m_LocalPosition.x

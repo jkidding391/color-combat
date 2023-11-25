@@ -61,5 +61,26 @@ public class EnemyShieldScript : MonoBehaviour
         return currentColor;
 
     }
+
+    void OnCollisionEnter(Collision other) {
+        //Debug.Log("hit");
+
+        if (other.gameObject.CompareTag("Wall")) {
+
+            //Debug.Log("Touch");
+            //Debug.Log(gameObject.GetComponent<EnemyColorController>().GetColor());
+
+            Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>(), true);
+            //Physics.IgnoreCollision(transform.GetComponent<CharacterController>(), other.gameObject.GetComponent<Collider>(), true);    //Apparently charactercontroller is a collider and was causing problems :/
+
+            //Debug.Log("Should ignore");
+
+        }//if
+        /*else {
+            Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.gameObject.GetComponent<Collider>(), false);
+
+        }//else*/
+
+    }
     
 }
