@@ -21,6 +21,7 @@ public class HealthIncreaseScript : MonoBehaviour
             if (other.GetComponent<HealthScript>().currentHealth != other.GetComponent<HealthScript>().maxHealth) {
 
              other.GetComponent<HealthScript>().IncreaseHealth();
+             other.GetComponent<HealthScript>().HealthUIController();
                 Destroy(gameObject);
 
             }
