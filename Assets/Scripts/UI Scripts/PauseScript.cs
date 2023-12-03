@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseScript : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject healthUI;
     //private PlayerControls playerControls;
     public void MainMenu() {
         SceneManager.LoadSceneAsync(0);
@@ -16,6 +17,7 @@ public class PauseScript : MonoBehaviour
 
     public void Pause() {
         pauseMenu.SetActive(true);
+        healthUI.SetActive(false);
         Time.timeScale = 0;
 
     }
@@ -28,6 +30,7 @@ public class PauseScript : MonoBehaviour
 
     public void Resume() {
         pauseMenu.SetActive(false);
+        healthUI.SetActive(true);
         Time.timeScale = 1;
 
     }

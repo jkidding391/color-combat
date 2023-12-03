@@ -888,6 +888,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
+    - target: {fileID: 8941895539313209462, guid: 8889bfc1c1dee844d8c64b0943d3b958, type: 3}
+      propertyPath: healthUI
+      value: 
+      objectReference: {fileID: 2044328356}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8038,6 +8042,11 @@ GameObject:
 --- !u!1 &2044328355 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2347829071137731273, guid: b3c4690ef804d18468861699eb4e84ef, type: 3}
+  m_PrefabInstance: {fileID: 2044328352}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2044328356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3189024758095201812, guid: b3c4690ef804d18468861699eb4e84ef, type: 3}
   m_PrefabInstance: {fileID: 2044328352}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2049869886
