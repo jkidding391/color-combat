@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44535863, g: 0.495008, b: 0.57398474, a: 1}
+  m_IndirectSpecularColor: {r: 0.4453587, g: 0.49500847, b: 0.57398546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1745,6 +1745,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthUI
       objectReference: {fileID: 0}
+    - target: {fileID: 7042284651015550697, guid: b3c4690ef804d18468861699eb4e84ef, type: 3}
+      propertyPath: Tracker
+      value: 
+      objectReference: {fileID: 659291318}
     - target: {fileID: 7907857184339493038, guid: b3c4690ef804d18468861699eb4e84ef, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.812195
@@ -2995,6 +2999,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8212a8f614501ae4f9e078085d855930, type: 3}
+--- !u!1 &659291318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4821258598332039089, guid: 8212a8f614501ae4f9e078085d855930, type: 3}
+  m_PrefabInstance: {fileID: 659291317}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &666118057
 PrefabInstance:
   m_ObjectHideFlags: 0
