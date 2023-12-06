@@ -9,6 +9,7 @@ public class EnemyScript : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] GameObject target;
+    [SerializeField] GameObject audioSource;
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private float enemySpeed = 5f;
     [SerializeField] private float gravityValue = -9.81f;
@@ -18,6 +19,8 @@ public class EnemyScript : MonoBehaviour
     private CharacterController controller;
     private Vector3 enemyVelocity;
     private bool ChaseCheck = true;
+    //private AudioSource explosionFX;
+
 
     private void Awake() {
         controller = GetComponent<CharacterController>();
@@ -29,6 +32,8 @@ public class EnemyScript : MonoBehaviour
         //currentColor = gameObject.GetComponent<EnemyColorController>().GetColor(); //Doesn't work for some reason
         target = GameObject.FindGameObjectWithTag("Player");
         tracker = GameObject.FindGameObjectWithTag("WinLossTracker");
+        audioSource = GameObject.FindGameObjectWithTag("Audio");
+        //explosionFX = GetComponent<AudioSource>();
         
     }
 
@@ -45,14 +50,20 @@ public class EnemyScript : MonoBehaviour
         if (other.gameObject.CompareTag("Bullet")){
 
             if (currentColor != other.gameObject.GetComponent<BulletController>().GetColor()) {
-                //Debug.Log("Bullet color = " + other.gameObject.GetComponent<BulletController>().GetColor() + ", Enemy color = " + currentColor);
 
                 if (maxHealth != 1) {
+
                 maxHealth--;
 
                 }//if
                 else {
+
                     tracker.GetComponent<WinLossScript>().currNum--;
+
+                    //explosionFX.Play();
+                    //Debug.Log("Audio Test");
+                    audioSource.GetComponent<AudioManagerScript>().PlayExplosionFX();
+
                     Destroy(gameObject);
 
                 }//else
@@ -60,15 +71,6 @@ public class EnemyScript : MonoBehaviour
             }//if
             
         }//if
-
-        //Also not working for some reason
-        /*else if (other.gameObject.CompareTag("Wall") && (other.gameObject.GetComponentInParent<WallColorController>().getColor() == currentColor)) {
-
-                //Debug.Log("Touch");
-
-                Physics.IgnoreCollision(transform.GetComponent<Collider>(), other.GetComponent<Collider>());
-
-        }*/
 
     }
 

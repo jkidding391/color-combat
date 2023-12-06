@@ -875,6 +875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SingleShooter Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 7407863510759275551, guid: 45534d9300556f84abb79649206f2f95, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

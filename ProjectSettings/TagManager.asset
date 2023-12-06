@@ -12,6 +12,7 @@ TagManager:
   - WinLossTracker
   - Shield
   - Health
+  - Audio
   layers:
   - Default
   - TransparentFX
