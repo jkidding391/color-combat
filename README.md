@@ -1,6 +1,6 @@
 To play game, extract .zip file to another folder and launch Color Combat.exe.
 
-This is a simple top-down shooter I developed for an Intro to Game Dev class.
+This is a simple top-down shooter I developed to learn game development and Unity.
 
 CONTROLS:
 WASD/Left Stick: Move player/Select menu options
